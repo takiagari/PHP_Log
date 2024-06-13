@@ -1,0 +1,145 @@
+/* CSS
+  取り急ぎpxベースで作成
+  今後はremベースに修正したい
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+h2 {
+  color: #333;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid #ddd;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+.copy-btn {
+  background-color: #72a1a6;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: none;
+  margin-left: 5px;
+}
+.copy-btn:hover {
+  background-color: #5e8a8e;
+}
+.copy-btn:focus {
+  outline: none;
+}
+input[type="text"] {
+  width: calc(100% - 70px);
+  padding: 5px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  outline: none;
+  color: #72a1a6;
+  background-color: #f9f9f9;
+  font-size: 18px;
+}
+input[type="text"]:focus {
+  border: 1px solid #aaa;
+}
+.url-container {
+  display: flex;
+  align-items: center;
+}
+.time {
+  color: #ccc;
+  font-size: 13px;
+}
+td:first-child {
+  width: 50px;
+}
+@media screen and (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+      display: block;
+  }
+  th {
+      display: none;
+  }
+  td {
+      position: relative;
+      padding-left: 20%;
+      text-align: left;
+      border: none;
+      border-bottom: 1px solid #ddd;
+  }
+  td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 10px;
+      font-weight: bold;
+  }
+  .url-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  input[type="text"] {
+      width: 100%;
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.pagination button {
+  background-color: #72a1a6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.pagination button:hover {
+  background-color: #5e8a8e;
+}
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.page-info {
+  text-align: center;
+  margin: 10px 0;
+}
+.toggle-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.toggle-label {
+  margin-right: 10px;
+}
+.logout-btn {
+  display: block;
+  margin: 20px auto;
+  background-color: #72a1a6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  background-color: #5e8a8e;
+}
