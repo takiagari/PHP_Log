@@ -7,7 +7,7 @@
 $filterUnique = isset($_GET['filter_unique']) && $_GET['filter_unique'] === '1';
 
 // ログファイルのパス
-$logFile = __DIR__ . '/log/referer/referrer_log.csv';
+$logFile = __DIR__ . '/log/referrer/referrer_log.csv';
 
 $logs = [];
 if (file_exists($logFile)) {

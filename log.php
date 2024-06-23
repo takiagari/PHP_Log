@@ -4,7 +4,7 @@
  * 
  * 訪問者が別のドメインから来た場合にそのリファラ情報を記録する。
  * localhostや特定のドメインからのアクセスは無視。
- * ログは'log/referer/'ディレクトリに保存され、ファイルサイズが1MBを超えた場合、
+ * ログは'log/referrer/'ディレクトリに保存され、ファイルサイズが1MBを超えた場合、
  * 新しいログファイルに切り替える。
  *
  * @return void この関数は値を返しません。
@@ -26,8 +26,8 @@ function logReferrer() {
         'https://github.com/takiagari', // Github
     ];
 
-    // '/log/referer/' ディレクトリ内にログファイルを保存
-    $baseFileName = __DIR__ . '/log/referer/referrer_log.csv'; // log.phpから見た絶対パス
+    // '/log/referrer/' ディレクトリ内にログファイルを保存
+    $baseFileName = __DIR__ . '/log/referrer/referrer_log.csv'; // log.phpから見た絶対パス
     $maxFileSize = 1000000; // 1MB
     $endDate = strtotime('2024-09-30'); // 記録終了日
 
@@ -70,7 +70,7 @@ function logReferrer() {
         // 現在の日時を含む新しいファイル名
         $newFileName = 'referrer_log_' . date('Y-m-d_H-i-s') . '.csv';
         // 現在のログファイルをリネーム
-        rename($baseFileName, __DIR__ . 'log/referer/' . $newFileName);
+        rename($baseFileName, __DIR__ . 'log/referrer/' . $newFileName);
     }
 
     // 新しいログファイルまたは現在のログファイルに追記（エラーをサイレントに処理）
