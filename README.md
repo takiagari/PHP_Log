@@ -9,7 +9,7 @@
 - ログビューワーでは重複するリファラログを除外して表示可能
 
 # 主要なファイル内容
-- log/referer/referrer_log.csv - リファラログファイル
+- log/referrer/referrer_log.csv - リファラログファイル
 - log.js - ログビューワーでのページネーションなどフロント機能処理
 - log.php - リファラログファイルに書き込む処理を担当
 - log_viewer.php - ログビューワー
